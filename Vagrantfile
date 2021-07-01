@@ -35,8 +35,8 @@ Vagrant.configure("2") do |config|
 
     # vue, vue-cli 설치
     cfg.vm.provision "shell", privileged: false, inline: <<-SCRIPT
-      mkdir /home/vagrant/npm-global
-      npm config set prefix /home/vagrant/npm-global
+      mkdir /home/vagrant/.npm-global
+      npm config set prefix /home/vagrant/.npm-global
       echo "export PATH=~/.npm-global/bin:$PATH" >> /home/vagrant/.bashrc
       npm install vue
       npm install -g @vue/cli
