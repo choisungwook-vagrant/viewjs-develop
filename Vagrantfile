@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.define CONFIG['server']['name'] do |cfg|
     cfg.vm.box = CONFIG['server']['box']
     cfg.vm.network "public_network", ip: CONFIG['server']['ip']
+    cfg.vm.network "forwarded_port", guest: 8080, host: 9090
     cfg.vm.hostname = CONFIG['server']['hostname']
     
     cfg.vm.provider "virtualbox" do |v|
