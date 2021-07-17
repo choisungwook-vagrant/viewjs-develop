@@ -1,7 +1,7 @@
 server:
-  name: "viewjs"
+  name: "vuejs"
   box: "generic/ubuntu1804"
-  hostname: "viewjs"
+  hostname: "vuejs"
   ip: 192.168.25.56
   memory: 8192
   cpu: 4
